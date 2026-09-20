@@ -1,21 +1,43 @@
 #include <stdio.h>
-#include <math.h>
 
-#define PI 3.1415926
+int main() {
+    char operator;
+    double num1, num2, result;
 
-int main()
-{
-    float angle;
-    printf("Enter an angle (in degrees): ");
-    scanf("%f", &angle);
+    printf("Enter an operator (+, -, *, /): ");
+    scanf(" %c", &operator);
 
-    double radians = angle * PI / 180.0; 
-    printf("Here are the trigonometric ratios for the angle:\n");
-    printf("sin = %f\n", sin(radians));
-    printf("cos = %f\n", cos(radians));
-    printf("tan = %f\n", tan(radians));
-    printf("cosec = %f\n", 1.0/sin(radians));
-    printf("sec = %f\n", 1.0/cos(radians));
-    printf("cot = %f\n", 1.0/tan(radians));
+    printf("Enter two numbers: ");
+    scanf("%lf %lf", &num1, &num2);
+
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            printf("Result = %.2lf\n", result);
+            break;
+
+        case '-':
+            result = num1 - num2;
+            printf("Result = %.2lf\n", result);
+            break;
+
+        case '*':
+            result = num1 * num2;
+            printf("Result = %.2lf\n", result);
+            break;
+
+        case '/':
+            if (num2 != 0) {
+                result = num1 / num2;
+                printf("Result = %.2lf\n", result);
+            } else {
+                printf("Error: Division by zero is not allowed.\n");
+            }
+            break;
+
+        default:
+            printf("Invalid operator.\n");
+    }
+
     return 0;
 }
