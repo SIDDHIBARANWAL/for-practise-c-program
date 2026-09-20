@@ -1,42 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    char operator;
-    double num1, num2, result;
+    int day;
 
-    printf("Enter an operator (+, -, *, /): ");
-    scanf(" %c", &operator);
+    printf("Enter a number from 1 to 7: ");
+    scanf("%d", &day);
 
-    printf("Enter two numbers: ");
-    scanf("%lf %lf", &num1, &num2);
-
-    switch (operator) {
-        case '+':
-            result = num1 + num2;
-            printf("Result = %.2lf\n", result);
-            break;
-
-        case '-':
-            result = num1 - num2;
-            printf("Result = %.2lf\n", result);
-            break;
-
-        case '*':
-            result = num1 * num2;
-            printf("Result = %.2lf\n", result);
-            break;
-
-        case '/':
-            if (num2 != 0) {
-                result = num1 / num2;
-                printf("Result = %.2lf\n", result);
-            } else {
-                printf("Error: Division by zero is not allowed.\n");
-            }
-            break;
-
-        default:
-            printf("Invalid operator.\n");
+    if (day == 1) {
+        printf("Sunday\n");
+    } else if (day == 2) {
+        printf("Monday\n");
+    } else if (day == 3) {
+        printf("Tuesday\n");
+    } else if (day == 4) {
+        printf("Wednesday\n");
+    } else if (day == 5) {
+        printf("Thursday\n");
+    } else if (day == 6) {
+        printf("Friday\n");
+    } else if (day == 7) {
+        printf("Saturday\n");
+    } else {
+        printf("Invalid input. Please enter a number from 1 to 7.\n");
     }
 
     return 0;
