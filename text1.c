@@ -1,31 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int num, original, reversed = 0, remainder;
+    int a, b, c;
     
-    printf("Enter a number: ");
-    scanf("%d", &num);
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
     
-    original = num;
-    
-    // Handle negative numbers
-    int is_negative = num < 0;
-    if (is_negative) {
-        num = -num;
-    }
-    
-    while (num > 0) {
-        remainder = num % 10;
-        reversed = reversed * 10 + remainder;
-        num /= 10;
-    }
-    
-    if (is_negative) {
-        reversed = -reversed;
-    }
-    
-    printf("Original number: %d\n", original);
-    printf("Reversed number: %d\n", reversed);
+    if (a >= b && a >= c)
+        printf("%d is the largest\n", a);
+    else if (b >= c)
+        printf("%d is the largest\n", b);
+    else
+        printf("%d is the largest\n", c);
     
     return 0;
 }
