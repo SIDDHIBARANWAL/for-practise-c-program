@@ -1,12 +1,23 @@
 #include <stdio.h>
 
 int main(void) {
-    int i = 1;
+    int a, b, result;
+    int count = 0;
 
-    while (i <= 10) {
-        printf("%d\n", i);
-        i++;
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+
+    result = a;
+
+    while (count < 1) {
+        result = result - b;
+        count++;
     }
+
+    printf("Difference = %d\n", result);
 
     return 0;
 }
