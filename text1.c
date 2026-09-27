@@ -1,12 +1,17 @@
 #include <stdio.h>
 
-int main(void) {
-    int n, i, sum = 0;
+int main() {
+    int n, i;
+    int first = 0, second = 1, next;
+
     scanf("%d", &n);
 
-    for (i = 1; i <= n; i++)
-        sum += i;
+    for (i = 1; i <= n; i++) {
+        printf("%d ", first);
+        next = first + second;
+        first = second;
+        second = next;
+    }
 
-    printf("Sum = %d\n", sum);
     return 0;
 }
