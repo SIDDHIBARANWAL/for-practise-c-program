@@ -1,10 +1,9 @@
 #include <stdio.h>
 int main() {
-    int num = 5, factorial = 1;
+    int count = 0;
     do {
-        factorial *= num;
-        num--;
-    } while (num > 0);
-    printf("Factorial: %d\n", factorial);
+        printf("This is an infinite loop. Count: %d\n", count++);
+        if (count == 8) break;  // Exits loop after 5 iterations
+    } while (1);
     return 0;
 }
