@@ -1,44 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    int month, year;
+    float principal, rate, time;
+    float simple_interest, compound_interest;
 
-    printf("Enter month number (1-12): ");
-    scanf("%d", &month);
+    printf("Enter Principal amount: ");
+    scanf("%f", &principal);
 
-    if (month == 2) {
-        printf("Enter year: ");
-        scanf("%d", &year);
-    }
+    printf("Enter Rate of interest (per annum): ");
+    scanf("%f", &rate);
 
-    switch (month) {
-        case 1: 
-        case 3:  
-        case 5:  
-        case 7:  
-        case 8:  
-        case 10: 
-        case 12: 
-            printf("This month has 31 days.\n");
-            break;
+    printf("Enter Time (in years): ");
+    scanf("%f", &time);
 
-        case 4:
-        case 6:  
-        case 9:
-        case 11:
-            printf("This month has 30 days.\n");
-            break;
+    simple_interest = (principal * rate * time) / 100;
+    compound_interest = principal * pow(1 + rate / 100, time) - principal;
 
-        case 2: 
-            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
-                printf("This month has 29 days (leap year).\n");
-            else
-                printf("This month has 28 days.\n");
-            break;
-
-        default:
-            printf("Invalid month number! Enter a number between 1 and 12.\n");
-    }
+    printf("\nSimple Interest = %.2f\n", simple_interest);
+    printf("Compound Interest = %.2f\n", compound_interest);
 
     return 0;
 }
