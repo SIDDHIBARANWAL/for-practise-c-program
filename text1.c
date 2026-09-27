@@ -1,16 +1,10 @@
 #include <stdio.h>
 
-int main() {
-    int n, i;
-    int first = 0, second = 1, next;
+int main(void) {
+    int i;
 
-    scanf("%d", &n);
-
-    for (i = 1; i <= n; i++) {
-        printf("%d ", first);
-        next = first + second;
-        first = second;
-        second = next;
+    for (i = 1; i <= 10; i++) {
+        printf("%d\n", i);
     }
 
     return 0;
