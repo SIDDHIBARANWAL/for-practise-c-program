@@ -1,10 +1,9 @@
 #include <stdio.h>
 int main() {
-    int num;
+    int i = 1;
     do {
-        printf("Enter a number greater than 0: ");
-        scanf("%d", &num);
-    } while (num <= 0);  // Condition
-    printf("You entered: %d\n", num);
+        printf("%d ", i);
+        i++;
+    } while (i <= 5);
     return 0;
 }
