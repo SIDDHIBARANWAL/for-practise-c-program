@@ -1,10 +1,9 @@
 #include <stdio.h>
 int main() {
-    int i = 1, sum = 0;
+    int i = 2;
     do {
-        sum += i;
-        i++;
-    } while (i <= 10);
-    printf("Sum: %d\n", sum);
+        printf("%d ", i);
+        i += 2;
+    } while (i < 10);
     return 0;
 }
