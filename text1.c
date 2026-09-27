@@ -1,16 +1,12 @@
 #include <stdio.h>
 
 int main(void) {
-    int n, i, sum = 0;
+    int i = 1;
 
-    printf("Enter a number: ");
-    scanf("%d", &n);
-
-    for (i = 1; i <= n; i++) {
-        sum += i;
+    while (i <= 10) {
+        printf("%d\n", i);
+        i++;
     }
-
-    printf("Sum = %d\n", sum);
 
     return 0;
 }
