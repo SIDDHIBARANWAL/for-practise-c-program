@@ -1,16 +1,12 @@
 #include <stdio.h>
-
-int main() {
-    int number;
-
-    printf("Enter a number: ");
-    scanf("%d", &number);
-
-    if (number > 0) {
-        printf("The number is positive.\n");
-    } else {
-        printf("The number is zero or negative.\n");
-    }
-
+int main()
+{
+    int a,b,quotient;
+    printf("enter the first value");
+    scanf("%d",&a);
+    printf("enter the second value");
+    scanf("%d",&b);
+    quotient = a / b;
+    printf("%d",quotient);
     return 0;
 }
