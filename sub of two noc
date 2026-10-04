@@ -1,8 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int a = 10, b = 4;
-    int diff = a - b;
-    printf("Difference = %d\n", diff);
+    int a, b, diff;
+
+    printf("Enter first number: ");
+    scanf("%d", &a);
+
+    printf("Enter second number: ");
+    scanf("%d", &b);
+
+    diff = a - b;
+
+    printf("Subtraction: %d - %d = %d\n", a, b, diff);
+
     return 0;
 }
