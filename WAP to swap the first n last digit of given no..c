@@ -8,9 +8,21 @@ int main()
     lastdigit = temp % 10;
     while (temp!=0)
     {
-        firstdigit = temp;
-    temp / = 10;
+        firstDigit = temp;
+        temp /= 10;
+        numDigits++;
     }
+    
+   
+    if (numDigits > 1) 
+
+        n = n - firstDigit * pow(10, numDigits - 1) + lastDigit * pow(10, numDigits - 1);
+        n = n - lastDigit + firstDigit;
+    }
+    
+    printf("Number after swapping first and last digit = %d", n);
+    return 0;
+}
    
 
 
