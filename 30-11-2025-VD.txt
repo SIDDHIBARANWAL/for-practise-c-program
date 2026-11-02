@@ -1,0 +1,12 @@
+That's because python me ek extra step karna parta hai
+
+Programming me ham function ke andar ek se jyada lines ka body likh sakte hai
+5-6 steps ek hi function me kar sakte hai
+So ab output me kaunsa step aana chahiye iske liye 'return' word use kiya jaata hai
+See this example
+
+Ye wala example me 2 step ek hi baar me ho jaega
+Iska final answer hoga (x + 5) * 3
+Aur last me jo bhi answer ho usko return kar denge
+Run it
+OK wait
